@@ -7,7 +7,7 @@ class TodoInput extends Component {
       todoTitle: '',
       todoResponsible: '',
       todoDescription: '',
-      todoPriority: 'Lowest'
+      todoPriority: '3 Low'
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,7 +27,7 @@ class TodoInput extends Component {
       todoTitle: '',
       todoResponsible: '',
       todoDescription: '',
-      todoPriority: 'Lowest'
+      todoPriority: '3 Low'
     });
   }
   render() {
@@ -51,25 +51,7 @@ class TodoInput extends Component {
               ></input>
             </div>
           </div>
-          <div className='form-group'>
-            <label
-              htmlFor='inputTodoResponsible'
-              className='col-sm-2 control-label'
-            >
-              Responsible
-            </label>
-            <div className='col-sm-10'>
-              <input
-                name='todoResponsible'
-                type='text'
-                className='form-control'
-                id='inputTodoResponsible'
-                value={this.state.todoResponsible}
-                onChange={this.handleInputChange}
-                placeholder='Responsible'
-              ></input>
-            </div>
-          </div>
+
           <div className='form-group'>
             <label htmlFor='inputTodoDesc' className='col-sm-2 control-label'>
               Description
@@ -100,17 +82,15 @@ class TodoInput extends Component {
                 value={this.state.todoPriority}
                 onChange={this.handleInputChange}
               >
-                <option>Lowest</option>
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
-                <option>Highest</option>
+                <option>1 High</option>
+                <option>2 Medium</option>
+                <option>3 Low</option>
               </select>
             </div>
           </div>
           <div className='form-group'>
             <div className='col-sm-offset-2 col-sm-10'>
-              <button type='submit' className='btn btn-success'>
+              <button type='submit' className='btn btn-info'>
                 Add Todo
               </button>
             </div>

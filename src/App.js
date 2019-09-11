@@ -5,22 +5,22 @@ import TodoInput from './TodoInput';
 
 var todos = [
   {
-    todoTitle: 'My first todo',
-    todoResponsible: 'Sebastian',
+    todoTitle: 'studying',
+
     todoDescription: 'Todo description',
-    todoPriority: 'low'
+    todoPriority: '3 Low'
   },
   {
-    todoTitle: 'My second todo',
-    todoResponsible: 'Sebastian',
+    todoTitle: 'running',
+
     todoDescription: 'Todo description',
-    todoPriority: 'medium'
+    todoPriority: '2 Medium'
   },
   {
-    todoTitle: 'My third todo',
-    todoResponsible: 'Sebastian',
+    todoTitle: 'coding',
+
     todoDescription: 'Todo description',
-    todoPriority: 'high'
+    todoPriority: '1 High'
   }
 ];
 
@@ -64,26 +64,35 @@ class App extends Component {
               <h4 className='list-group-item-heading'>
                 {todo.todoTitle}{' '}
                 <small>
-                  <span className='label label-info'>{todo.todoPriority}</span>
+                  {todo.todoPriority === '1 High' && (
+                    <span className='label label-danger'>
+                      {todo.todoPriority}
+                    </span>
+                  )}
+                  {todo.todoPriority === '2 Medium' && (
+                    <span className='label label-primary'>
+                      {todo.todoPriority}
+                    </span>
+                  )}
+                  {todo.todoPriority === '3 Low' && (
+                    <span className='label label-success'>
+                      {todo.todoPriority}
+                    </span>
+                  )}
                 </small>
               </h4>
-              <p>
-                <span
-                  className='glyphicon glyphicon-user'
-                  aria-hidden='true'
-                ></span>{' '}
-                {todo.todoResponsible}
-              </p>
+
               <p>{todo.todoDescription}</p>
+
               <button
-                className='btn btn-danger btn-sm'
+                className='btn btn-info'
                 onClick={this.handleRemoveTodo.bind(this, index)}
               >
                 <span
                   className='glyphicon glyphicon-trash'
                   aria-hidden='true'
                 ></span>{' '}
-                Delete
+                Remove
               </button>
             </li>
           ))}
