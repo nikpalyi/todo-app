@@ -12,7 +12,6 @@ class TodoInput extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
   handleInputChange(event) {
     const target = event.target;
     const value = target.value;
@@ -21,7 +20,6 @@ class TodoInput extends Component {
       [name]: value
     });
   }
-
   handleSubmit(event) {
     event.preventDefault();
     this.props.onAddTodo(this.state);
@@ -32,7 +30,6 @@ class TodoInput extends Component {
       todoPriority: 'Lowest'
     });
   }
-
   render() {
     return (
       <div>
