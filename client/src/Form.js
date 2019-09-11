@@ -50,7 +50,6 @@ class TodoInput extends Component {
               ></input>
             </div>
           </div>
-
           <div className='form-group'>
             <label htmlFor='inputTodoDesc' className='col-sm-2 control-label'>
               Description
