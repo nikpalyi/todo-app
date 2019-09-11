@@ -1,4 +1,4 @@
-var todos = [
+export const todos = [
   {
     todoTitle: 'My first todo',
     todoResponsible: 'Sebastian',

@@ -1,28 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 
-import TodoInput from './TodoInput';
-
-var todos = [
-  {
-    todoTitle: 'studying',
-
-    todoDescription: 'Todo description',
-    todoPriority: '3 Low'
-  },
-  {
-    todoTitle: 'running',
-
-    todoDescription: 'Todo description',
-    todoPriority: '2 Medium'
-  },
-  {
-    todoTitle: 'coding',
-
-    todoDescription: 'Todo description',
-    todoPriority: '1 High'
-  }
-];
+import Form from './Form';
+import { todos } from './todos';
 
 class App extends Component {
   constructor(props) {
@@ -51,18 +30,19 @@ class App extends Component {
     return (
       <div className='container'>
         <div className='page-header'>
-          <h1>React ToDo Application</h1>
+          <h1>React ToDo Task Application</h1>
         </div>
-        <TodoInput onAddTodo={this.handleAddTodo} />
+        <Form onAddTodo={this.handleAddTodo} />
         <hr />
         <h4>
-          Todo Count: <span className='badge'>{this.state.todos.length}</span>
+          Todo Counting:{' '}
+          <span className='badge'>{this.state.todos.length}</span>
         </h4>
         <ul className='list-group'>
           {this.state.todos.map((todo, index) => (
             <li className='list-group-item' key={index}>
               <h4 className='list-group-item-heading'>
-                {todo.todoTitle}{' '}
+                {todo.todoTask}{' '}
                 <small>
                   {todo.todoPriority === '1 High' && (
                     <span className='label label-danger'>

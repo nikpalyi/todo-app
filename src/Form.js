@@ -4,10 +4,10 @@ class TodoInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todoTitle: '',
+      todoTask: '',
       todoResponsible: '',
       todoDescription: '',
-      todoPriority: '3 Low'
+      todoPriority: '1 High'
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,28 +24,28 @@ class TodoInput extends Component {
     event.preventDefault();
     this.props.onAddTodo(this.state);
     this.setState({
-      todoTitle: '',
+      todoTask: '',
       todoResponsible: '',
       todoDescription: '',
-      todoPriority: '3 Low'
+      todoPriority: '1 High'
     });
   }
   render() {
     return (
       <div>
-        <h4>Add New Todo</h4>
+        <h4>Add New Task</h4>
         <form className='form-horizontal' onSubmit={this.handleSubmit}>
           <div className='form-group'>
-            <label htmlFor='inputTodoTitle' className='col-sm-2 control-label'>
-              Todo
+            <label htmlFor='inputTodoTask' className='col-sm-2 control-label'>
+              Todo Task
             </label>
             <div className='col-sm-10'>
               <input
-                name='todoTitle'
+                name='todoTask'
                 type='text'
                 className='form-control'
-                id='inputTodoTitle'
-                value={this.state.todoTitle}
+                id='inputTodoTask'
+                value={this.state.todoTask}
                 onChange={this.handleInputChange}
                 placeholder='Title'
               ></input>
@@ -60,10 +60,11 @@ class TodoInput extends Component {
               <textarea
                 name='todoDescription'
                 className='form-control'
-                rows='3'
+                rows='2'
                 id='inputTodoDesc'
                 value={this.state.todoDescription}
                 onChange={this.handleInputChange}
+                placeholder='Type your task in detail..'
               ></textarea>
             </div>
           </div>
