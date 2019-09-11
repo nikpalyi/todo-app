@@ -5,7 +5,6 @@ class TodoInput extends Component {
     super(props);
     this.state = {
       todoTask: '',
-      todoResponsible: '',
       todoDescription: '',
       todoPriority: '1 High'
     };
@@ -25,7 +24,6 @@ class TodoInput extends Component {
     this.props.onAddTodo(this.state);
     this.setState({
       todoTask: '',
-      todoResponsible: '',
       todoDescription: '',
       todoPriority: '1 High'
     });
@@ -47,7 +45,8 @@ class TodoInput extends Component {
                 id='inputTodoTask'
                 value={this.state.todoTask}
                 onChange={this.handleInputChange}
-                placeholder='Title'
+                placeholder='Type here your task..'
+                required
               ></input>
             </div>
           </div>

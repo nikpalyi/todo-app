@@ -1,20 +1,17 @@
 export const todos = [
   {
-    todoTitle: 'My first todo',
-    todoResponsible: 'Sebastian',
-    todoDescription: 'Todo description',
-    todoPriority: 'low'
+    todoTask: 'running',
+    todoDescription: 'around park, 1 hour',
+    todoPriority: '3 Low'
   },
   {
-    todoTitle: 'My second todo',
-    todoResponsible: 'Sebastian',
-    todoDescription: 'Todo description',
-    todoPriority: 'medium'
+    todoTask: 'studying',
+    todoDescription: 'Web development, 3 hours',
+    todoPriority: '2 Medium'
   },
   {
-    todoTitle: 'My third todo',
-    todoResponsible: 'Sebastian',
-    todoDescription: 'Todo description',
-    todoPriority: 'high'
+    todoTask: 'coding',
+    todoDescription: 'ReactJS, 2 hours',
+    todoPriority: '1 High'
   }
 ];

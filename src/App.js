@@ -6,9 +6,9 @@ import { todos } from './todos';
 class App extends Component {
   constructor(props) {
     super(props);
-
+    console.log(todos);
     this.state = {
-      todos
+      todos: todos
     };
 
     this.handleAddTodo = this.handleAddTodo.bind(this);
